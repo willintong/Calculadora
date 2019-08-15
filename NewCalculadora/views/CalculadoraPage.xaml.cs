@@ -114,8 +114,8 @@ namespace NewCalculadora.views
 
         private void ButtonSDR_Clicked(object sender, EventArgs e)
         {
-            int Number = Convert.ToInt16(lblNumber.Text) * -1;
-            lblNumber.Text = Number.ToString();
+            int stringNumber = Convert.ToInt32(lblNumber.Text) * -1;
+            lblNumber.Text = stringNumber.ToString();
         }
         private void ButtonPorc_Clicked(object sender, EventArgs e)
         {
@@ -186,27 +186,27 @@ namespace NewCalculadora.views
                 {
                     case "porcentaje":
                         i++;
-                        actualNumber = actualNumber * Convert.ToInt16(operationsList[i]) / 100;
+                        actualNumber = actualNumber * Convert.ToInt32(operationsList[i]) / 100;
                         
                         break;
                     case "division":
                         i++;
-                        actualNumber = actualNumber / Convert.ToDouble(operationsList[i]);
+                        actualNumber = actualNumber / Convert.ToInt32(operationsList[i]);
                         break;
                     case "multiplicacion":
                         i++;
-                        actualNumber = actualNumber * Convert.ToDouble(operationsList[i]);
+                        actualNumber = actualNumber * Convert.ToInt32(operationsList[i]);
                         break;
                     case "resta":
                         i++;
-                        actualNumber = actualNumber - Convert.ToDouble(operationsList[i]);
+                        actualNumber = actualNumber - Convert.ToInt32(operationsList[i]);
                         break;
                     case "suma":
                         i++;
-                        actualNumber = actualNumber + Convert.ToDouble(operationsList[i]);
+                        actualNumber = actualNumber + Convert.ToInt32(operationsList[i]);
                         break;
                     default:
-                        actualNumber = Convert.ToDouble(operationsList[i]);
+                        actualNumber = Convert.ToInt32(operationsList[i]);
                         break;
                 }
             }
