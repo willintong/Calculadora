@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="NewCalculadora.views.Page1">
+    <Grid RowSpacing="1"  ColumnSpacing="1">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Text="" Grid.ColumnSpan="4" HorizontalOptions="End"
+               VerticalOptions="end" FontSize="40" TextColor="Blue"
+               Margin="10" x:Name="lblOperations"/>
+       
+        <Label Text="" Grid.Row="4" Grid.ColumnSpan="4" HorizontalOptions="End"
+               VerticalOptions="end" FontSize="60" TextColor="Red"
+               Margin="10" x:Name="lblNumber"/>
+
+        <Button Clicked="ButtonC_clicked" Style="{StaticResource numbers}" Text="C" Grid.Row="2"/>
+        <Button Clicked="ButtonPare_clicked" Style="{StaticResource numbers}" Text="()" Grid.Row="2" Grid.Column="1"/>
+        <Button Clicked="ButtonPorc_clicked" Style="{StaticResource numbers}" Text="%" Grid.Row="2" Grid.Column="2"/>
+        <Button Clicked="ButtonDiv_clicked" Style="{StaticResource numbers}" Text="/" Grid.Row="2" Grid.Column="3"/>
+
+        <Button Clicked="Button7_clicked" Style="{StaticResource numbers}" Text="7" Grid.Row="3" />
+        <Button Clicked="Button8_clicked" Style="{StaticResource numbers}" Text="8" Grid.Row="3" Grid.Column="1"/>
+        <Button Clicked="Button9_clicked" Style="{StaticResource numbers}" Text="9" Grid.Row="3" Grid.Column="2"/>
+        <Button Clicked="ButtonPor_clicked" Style="{StaticResource numbers}" Text="x" Grid.Row="3" Grid.Column="3"/>
+
+        <Button Clicked="Button4_clicked" Style="{StaticResource numbers}" Text="4" Grid.Row="4" />
+        <Button Clicked="Button5_clicked" Style="{StaticResource numbers}" Text="5" Grid.Row="4" Grid.Column="1"/>
+        <Button Clicked="Button6_clicked" Style="{StaticResource numbers}" Text="6" Grid.Row="4" Grid.Column="2"/>
+        <Button Clicked="ButtonRES_clicked" Style="{StaticResource numbers}" Text="-" Grid.Row="4" Grid.Column="3"/>
+
+        <Button Clicked="Button1_clicked" Style="{StaticResource numbers}" Text="1" Grid.Row="5"/>
+        <Button Clicked="Button2_clicked" Style="{StaticResource numbers}" Text="2" Grid.Row="5" Grid.Column="1"/>
+        <Button Clicked="Button3_clicked" Style="{StaticResource numbers}" Text="3" Grid.Row="5" Grid.Column="2"/>
+        <Button Clicked="ButtonSum_clicked" Style="{StaticResource numbers}" Text="+" Grid.Row="5" Grid.Column="3"/>
+
+        <Button Clicked="ButtonSDR_clicked" Style="{StaticResource numbers}" Text="+/-" Grid.Row="6"/>
+        <Button Clicked="Button0_clicked" Style="{StaticResource numbers}" Text="0" Grid.Row="6" Grid.Column="1"/>
+        <Button Clicked="Button._clicked" Style="{StaticResource numbers}" Text="." Grid.Row="6" Grid.Column="2"/>
+        <Button Clicked="ButtonResul_clicked" Style="{StaticResource numbers}" Text="=" Grid.Row="6" Grid.Column="3"/>
+
+    </Grid>
+
+
+</ContentPage>
